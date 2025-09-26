@@ -1,0 +1,46 @@
+@use '../../style/base/media' as *;
+
+.banner {
+  position: relative;
+  padding: 100px 0;
+  // height: 100vh;
+  background-image: url('../../assets/img/bg-image-mob.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(5, 25, 38, 0.69);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  &__h1 {
+    text-align: center;
+  }
+
+  &__h2 {
+    max-width: 580px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+  }
+
+  &__button {
+    margin: 50px auto 0 auto;
+  }
+}
+
+@include media-lg {
+  .banner {
+    padding: 120px 0;
+
+    &__h2,
+    &__button {
+      margin-top: 80px;
+    }
+  }
+}

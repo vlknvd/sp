@@ -1,0 +1,12 @@
+@use '../../style/base/media' as *;
+
+.header {
+  background-color: var(--sp-bg-c-blue);
+  padding: 20px 0;
+}
+
+@include media-lg {
+  .header {
+    padding: 30px 0;
+  }
+}

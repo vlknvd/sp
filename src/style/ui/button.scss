@@ -1,0 +1,33 @@
+@use '../base/media' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  width: var(--sp-btn-w);
+  height: var(--sp-btn-h);
+  border-radius: var(--sp-btn-b-r);
+  background-color: var(--sp-btn-bg);
+  color: var(--sp-btn-f-c);
+  transition: background-color 0.2s, color 0.2s;
+  font-size: var(--sp-btn-f-s);
+
+  &:hover {
+    background-color: var(--sp-btn-bg-hover);
+    color: var(--sp-btn-f-c-hover);
+  }
+
+  &:active {
+    background-color: var(--sp-btn-bg-active);
+    color: var(--sp-btn-f-c-active);
+  }
+
+  &:disabled {
+    background-color: var(--sp-btn-bg-disabled);
+    color: var(--sp-btn-f-c-disabled);
+  }
+}

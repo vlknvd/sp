@@ -1,0 +1,118 @@
+@use './media' as *;
+
+:root {
+  // container
+  --sp-padding: 0 20px;
+  --sp-max-w: 100%;
+
+  // fonts
+  --sp-font-f: 'Montserrat';
+  --sp-font-c-white: #ffffff;
+  --sp-font-c-dark: #000000;
+  --sp-font-c-blue: #003051;
+
+  // titles
+  --sp-h1-f-w: 600;
+  --sp-h1-f-s: 30px;
+  --sp-h1-l-h: 1.5;
+
+  --sp-h2-f-w: 400;
+  --sp-h2-f-s: 22px;
+  --sp-h2-l-h: 1.5;
+
+  --sp-h3-f-w: 400;
+  --sp-h3-f-s: 12px;
+  --sp-h3-l-h: 1.5;
+
+  --sp-h4-f-w: 400;
+  --sp-h4-f-s: 18px;
+  --sp-h4-l-h: 1.5;
+
+  // background
+  --sp-bg-c-blue: #003051;
+  --sp-bg-c-white: #ffffff;
+
+  // btn
+  --sp-btn-b-r: 30px;
+  --sp-btn-w: 220px;
+  --sp-btn-h: 50px;
+  --sp-btn-f-s: 14px;
+
+  --sp-btn-f-c: #003051;
+  --sp-btn-bg: #ffffff;
+  --sp-btn-bg-hover: #003051;
+  --sp-btn-f-c-hover: #fff;
+  --sp-btn-bg-active: #e0e0e0;
+  --sp-btn-f-c-active: #003051;
+  --sp-btn-bg-disabled: rgb(46, 46, 46);
+  --sp-btn-f-c-disabled: #fff;
+
+  // text
+  --sp-text-lg-f-w: 400px;
+  --sp-text-lg-f-s: 18px;
+  --sp-text-lg-l-h: 1.5;
+
+  --sp-text-md-f-w: 400px;
+  --sp-text-md-f-s: 14px;
+  --sp-text-md-l-h: 1.5;
+
+  --sp-text-sm-f-w: 400px;
+  --sp-text-sm-f-s: 12px;
+  --sp-text-sm-l-h: 1.5;
+
+  --sp-text-xs-f-w: 400px;
+  --sp-text-xs-f-s: 10px;
+  --sp-text-xs-l-h: 1.5;
+
+  --sp-text-num-f-s: 36px;
+  --sp-text-upp: uppercase;
+  --sp-text-bold: 700;
+
+  // card
+  --sp-card-b: border: 1px solid #003051
+  --sp-card-bg-c: #ffffff;
+  --sp-card-lg-w: 300px;
+  --sp-card-md-w: 200px;
+}
+
+@include media-md {
+    :root {
+        --sp-padding: 0 40px;
+
+        --sp-h1-f-s: 48px;
+        --sp-h2-f-s: 24px;
+        --sp-h3-f-s: 16px;
+        --sp-h4-f-s: 28px;
+
+        --sp-text-md-f-s: 16px;
+        --sp-text-sm-f-s: 14px;
+        --sp-text-xs-f-s: 14px;
+
+        --sp-btn-f-s: 16px;
+    }
+}
+
+@include media-lg {
+    :root {
+        --sp-padding: 0 10px; 
+        --sp-max-w: 1240px;
+
+        --sp-h1-f-s: 60px;
+        --sp-h2-f-s: 32px;
+        --sp-h3-f-s: 21px;
+        --sp-h4-f-s: 32px;
+
+        --sp-text-xs-f-s: 18px;
+
+        --sp-text-md-f-s: 20px;
+
+        --sp-text-sm-f-s: 24px;
+
+        --sp-btn-w: 260px;
+        --sp-btn-h: 60px;
+        --sp-btn-f-s: 20px;
+
+        --sp-text-num-f-s: 50px;
+    }
+}    
+

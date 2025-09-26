@@ -1,0 +1,52 @@
+@use '../../style/base/media' as *;
+
+.navigation {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  background: var(--sp-bg-c-blue);
+  padding: 20px;
+  z-index: 999;
+
+  &--visible {
+    display: block;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+      &:hover {
+        color: #4db8ff;
+      }
+    }
+  }
+}
+
+@include media-md {
+  .navigation {
+    display: block;
+    position: relative;
+    top: 0;
+    padding: 0;
+    &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@use '../../style/base/media' as *;
+
+.footer {
+  background: var(--sp-bg-c-blue);
+  border-top: 1px solid var(--sp-bg-c-white);
+  padding: 30px 0;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &-left {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    &-right {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 10px;
+      justify-content: space-between;
+    }
+  }
+
+  &__address--link {
+    display: block;
+    max-width: 160px;
+  }
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    transition: color 0.3s;
+    &:hover {
+      color: #4db8ff;
+    }
+  }
+}
+
+@include media-md {
+  .footer {
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      &-left {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &-right {
+        flex-direction: column;
+        margin-top: 0;
+        justify-content: space-between;
+      }
+    }
+    &__address--link {
+      max-width: 180px;
+    }
+  }
+}
+
+@include media-lg {
+  .footer {
+    padding: 60px 0;
+    &__title {
+      font-size: 22px;
+    }
+    &__address--link {
+      max-width: 220px;
+    }
+  }
+}

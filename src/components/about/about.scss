@@ -1,0 +1,45 @@
+@use '../../style/base/media' as *;
+
+.about {
+  &__header {
+    padding: 20px 0;
+    background-color: var(--sp-bg-c-blue);
+  }
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    padding: 40px 0;
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+@include media-md {
+  .about {
+    &__content {
+      padding: 50px 0;
+      &-list {
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@include media-lg {
+  .about {
+    &__header {
+      padding: 30px 0;
+    }
+
+    &__content {
+      padding: 60px 0;
+      &-list {
+        gap: 30px;
+      }
+    }
+  }
+}

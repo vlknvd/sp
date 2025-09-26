@@ -1,0 +1,22 @@
+@use '../../style/base/media' as *;
+
+.assortment {
+  &__header {
+    padding: 20px 0;
+    background-color: var(--sp-bg-c-blue);
+  }
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    padding: 20px 0;
+  }
+}
+
+@include media-lg {
+  .assortment {
+    &__content {
+      padding-top: 20px;
+    }
+  }
+}

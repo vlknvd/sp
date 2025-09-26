@@ -1,0 +1,64 @@
+@use './media' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+ol,
+ul,
+li {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sp-font-f);
+  background-color: var(--sp-bg-c-white);
+}
+
+.container {
+  padding: var(--sp-padding);
+  max-width: var(--sp-max-w);
+}
+
+@include media-lg {
+  .container {
+    margin: 0 auto;
+  }
+}

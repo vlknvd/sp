@@ -1,0 +1,56 @@
+@use '../../style/base/media' as *;
+
+.adv {
+  &__header {
+    padding: 20px 0;
+    background-color: var(--sp-bg-c-blue);
+  }
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    padding: 20px 0;
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &-item {
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 1px 1px 4px 2px rgba(0, 48, 81, 0.22);
+    }
+  }
+}
+
+@include media-md {
+  .adv {
+    &__content {
+      padding: 40px 0;
+      &-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      &-item {
+        padding: 20px;
+        width: 42%;
+      }
+    }
+  }
+}
+
+@include media-lg {
+  .adv {
+    padding: 20px 0;
+    &__content {
+      &-list {
+        gap: 30px;
+      }
+    }
+  }
+}

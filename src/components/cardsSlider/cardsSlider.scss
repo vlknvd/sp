@@ -1,0 +1,51 @@
+@use '../../style/base/media' as *;
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40px;
+
+  &-slide {
+    display: flex;
+  }
+
+  &-pagination-bullet {
+    height: 10px;
+    width: 10px;
+    margin: 0 10px !important;
+    transition: all 0.3s ease;
+    &-active {
+      background-color: var(--sp-bg-c-blue);
+    }
+  }
+  &-wrapper {
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+@include media-lg {
+  .swiper {
+    padding: 40px 2px 80px;
+    position: relative;
+
+    &-slide {
+      transition: transform 0.3s ease, z-index 0.3s ease;
+      z-index: 1;
+
+      &:hover {
+        transform: scale(1.1) translateY(-10px);
+        z-index: 10;
+      }
+    }
+
+    &-pagination-bullet {
+      height: 20px;
+      width: 20px;
+      margin: 0 10px !important;
+      transition: all 0.3s ease;
+    }
+  }
+}
