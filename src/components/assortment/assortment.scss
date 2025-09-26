@@ -9,14 +9,25 @@
     text-align: center;
   }
   &__content {
-    padding: 20px 0;
+    padding: 40px 0 20px;
+  }
+}
+
+@include media-md {
+  .assortment {
+    &__content {
+      padding: 50px 0 30px;
+    }
   }
 }
 
 @include media-lg {
   .assortment {
+    &__header {
+      padding: 30px 0;
+    }
     &__content {
-      padding-top: 20px;
+      padding: 40px 0;
     }
   }
 }

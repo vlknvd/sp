@@ -1,7 +1,7 @@
 import Button from '../button/Button';
 import './feedback.scss';
 
-const Feedback = () => {
+const Feedback = ({ onClick }) => {
   return (
     <section className='feedback'>
       <div className='container'>
@@ -12,7 +12,7 @@ const Feedback = () => {
           <h3 className='feedback__subtitle sp-h3 sp-text-white'>
             с предложением о сотрудничестве
           </h3>
-          <Button name={'feedback'} />
+          <Button name={'feedback'} onClick={onClick} />
         </div>
       </div>
     </section>

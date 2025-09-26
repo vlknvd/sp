@@ -1,0 +1,137 @@
+@use '../../style/base/media' as *;
+
+.popup {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  &__content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: var(--sp-bg-c-white);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 70%;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    & label {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__input {
+    display: block;
+    margin-top: 8px;
+    width: 100%;
+    padding: 20px;
+    font-size: 16px;
+    border: 1px solid var(--sp-bg-c-blue);
+    border-radius: 4px;
+    box-sizing: border-box;
+    align-self: center;
+    flex: 1;
+    outline: none;
+  }
+
+  &__button {
+    width: 80%;
+    padding: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: var(--sp-bg-c-blue);
+    color: var(--sp-bg-c-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid var(--sp-bg-c-blue);
+    transition: background-color 0.2s, color 0.2s;
+    &:hover {
+      background-color: var(--sp-btn-bg);
+      color: var(--sp-btn-f-c);
+    }
+
+    &:active {
+      background-color: var(--sp-btn-bg-active);
+      color: var(--sp-btn-f-c-active);
+    }
+
+    &:disabled {
+      background-color: var(--sp-btn-bg-disabled);
+      color: var(--sp-btn-f-c-disabled);
+    }
+  }
+  &__success {
+    margin-top: 8px;
+  }
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover {
+      color: var(--sp-bg-c-blue); // или любой акцентный цвет
+    }
+  }
+}
+
+@include media-md {
+  .popup {
+    &__content {
+      padding: 50px;
+    }
+    &__form {
+      margin-top: 20px;
+    }
+    &__input {
+      margin-top: 10px;
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    &__button {
+      width: 60%;
+      padding: 20px;
+      font-size: 20px;
+    }
+    &__close {
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

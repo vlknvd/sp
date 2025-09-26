@@ -1,7 +1,7 @@
 @use '../../style/base/media' as *;
 
 .feedback {
-  padding: 20px;
+  padding: 30px 0;
   background-color: var(--sp-bg-c-blue);
   &__title,
   &__subtitle {
@@ -20,12 +20,6 @@
 
 @include media-md {
   .feedback {
-    padding: 40px;
-  }
-}
-
-@include media-lg {
-  .feedback {
-    padding: 60px;
+    padding: 50px 0;
   }
 }

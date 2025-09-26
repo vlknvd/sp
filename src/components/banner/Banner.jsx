@@ -2,7 +2,7 @@ import Button from '../button/Button';
 import './banner.scss';
 import { useEffect, useState } from 'react';
 
-const Banner = () => {
+const Banner = ({ onClick }) => {
   return (
     <section className='banner'>
       <div className='container'>
@@ -13,7 +13,7 @@ const Banner = () => {
           <h2 className='banner__h2 sp-h2 sp-text-white'>
             Дистрибьютор продуктов питания и безалкогольных напитков
           </h2>
-          <Button name={'banner'} />
+          <Button name={'banner'} onClick={onClick} />
         </div>
       </div>
     </section>
